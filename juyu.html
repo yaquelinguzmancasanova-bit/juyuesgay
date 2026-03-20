@@ -1,0 +1,288 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tienda de Celulares</title>
+
+<style>
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial;
+    margin: 0;
+    background: #f2f2f2;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(45deg, #000, #444);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* MENÚ */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: #222;
+    position: sticky;
+    top: 0;
+}
+
+nav a {
+    color: white;
+    padding: 12px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background: #555;
+}
+
+/* SECCIONES */
+section {
+    padding: 15px;
+}
+
+/* PRODUCTOS */
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.producto {
+    background: white;
+    width: 45%;
+    margin: 8px;
+    padding: 10px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
+
+.producto:hover {
+    transform: scale(1.05);
+}
+
+.producto img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.precio {
+    color: green;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* BOTÓN */
+.boton {
+    display: inline-block;
+    background: #25D366;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 5px;
+}
+
+/* FORMULARIO */
+form {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin: 6px 0;
+}
+
+input[type="submit"] {
+    background: #25D366;
+    color: white;
+    border: none;
+}
+
+/* MULTIMEDIA */
+video {
+    width: 50%;
+}
+
+/* REDES */
+.redes a {
+    display: block;
+    margin: 5px 0;
+    color: #25D366;
+}
+
+/* WHATSAPP */
+.whatsapp {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    background: #25D366;
+    color: white;
+    padding: 12px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* VISOR DE IMAGEN */
+#visor {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+#visor img {
+    width: 70%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+/* FOOTER */
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .producto {
+        width: 90%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>📱 Tienda de Celulares</h1>
+    <p>Los mejores smartphones al mejor precio</p>
+</header>
+
+<nav>
+    <a href="#inicio">🏠 Inicio</a>
+    <a href="#galeria">📸 Galería</a>
+    <a href="#formulario">🛒 Comprar</a>
+    <a href="#multimedia">🎥 Multimedia</a>
+    <a href="#contacto">📞 Contacto</a>
+</nav>
+
+<section id="inicio">
+    <h2>Bienvenido</h2>
+    <p>Compra celulares de última generación con garantía.</p>
+</section>
+
+<section id="galeria">
+    <h2>Celulares en Venta</h2>
+    <div class="galeria">
+
+        <div class="producto">
+            <img src="https://image-us.samsung.com/us/smartphones/galaxy-s24/all-gallery/01_E3_TitaniumBlack_Lockup_1600x1200.jpg?$product-details-jpg$?$product-details-thumbnail-jpg$">
+            <h3>Samsung Galaxy</h3>
+            <p class="precio">$5,000 MXN</p>
+            <a href="#" class="boton">Comprar</a>
+        </div>
+
+        <div class="producto">
+            <img src="https://tse4.mm.bing.net/th/id/OIP.rl43xousys68HgxOU0h5DwHaHa?pid=Api&P=0&h=180">
+            <h3>iPhone</h3>
+            <p class="precio">$10,000 MXN</p>
+            <a href="#" class="boton">Comprar</a>
+        </div>
+
+    </div>
+</section>
+
+<section id="formulario">
+    <h2>Comprar / Contacto</h2>
+    <form>
+        <input type="text" placeholder="Nombre">
+        <input type="email" placeholder="Correo">
+        <select>
+            <option>Selecciona un celular</option>
+            <option>Samsung Galaxy</option>
+            <option>iPhone</option>
+        </select>
+        <textarea placeholder="Dirección o mensaje"></textarea>
+        <input type="submit" value="Enviar">
+    </form>
+</section>
+
+<!-- MULTIMEDIA -->
+<section id="multimedia">
+    <h2>🎧 Audio</h2>
+    <iframe src="https://getsnap.link/AotmYrU7Jxf" height="80"></iframe>
+
+    </audio>
+
+    <h2>🎥 Video Promocional</h2>
+    <video controls style ="widhh:width:50%;">
+    <source src="\Users\o\OneDrive\Music\vcfjcfgh c_files\WhatsApp Video 2026-03-18 at 9.19.05 PM.mp4">
+    </video> 
+</section>
+
+<section id="contacto">
+    <h2>Redes Sociales</h2>
+    <div class="redes">
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+    </div>
+
+    <h2>Correo</h2>
+    <p><a href="mailto;
+   <a href="mailito:  generuluac8@gmail.com y luismoo1207 8@gmail"generuluc8@gmail.com >luismoo1207 8@gmail </a></p>
+</section>
+
+<div id="visor" onclick="cerrarImagen()">
+    <img id="imgGrande">
+</div>
+
+<a href="#" class="whatsapp">💬</a>
+
+<footer>
+    <p>© 2026 Tienda de Celulares</p>
+</footer>
+
+<script>
+function verImagen(src) {
+    document.getElementById("visor").style.display = "flex";
+    document.getElementById("imgGrande").src = src;
+}
+
+function cerrarImagen() {
+    document.getElementById("visor").style.display = "none";
+}
+
+window.onload = function() {
+    document.getElementById("galeria").scrollIntoView({
+        behavior: "smooth"
+    });
+};
+</script>
+
+</body>
+</html>
